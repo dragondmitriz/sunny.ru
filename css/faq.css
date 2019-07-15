@@ -1,0 +1,26 @@
+.question{
+  color:#06F;
+  font-size:24px;
+}
+
+.answer{
+  display: none;
+}
+
+body, input, textarea{
+  font-family:"Comic Sans MS", cursive;
+}
+
+form{
+  margin-top: 2%;
+}
+
+.input_mail{
+  width: 60%;
+}
+
+.input_quastion{
+  width: 60%;
+  height: 200px;
+  resize: none;
+}

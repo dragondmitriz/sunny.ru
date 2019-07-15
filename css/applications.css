@@ -1,0 +1,76 @@
+.content
+{
+  display: flex;
+}
+
+.form
+{
+  margin-top: 1%;
+  width: 65%;
+}
+
+fieldset{
+  width: 95%;
+  text-align: right;
+}
+
+.label, select, input
+{
+  margin: 1px;
+}
+
+.input-text, .input-mail{
+  width: 50%;
+}
+
+.input-date{
+  width: 30%;
+  margin-right: 20%;
+}
+
+.input-submit{
+  margin-top: 1%;
+}
+
+input,select{
+  font-family:"Comic Sans MS", cursive;
+}
+
+.images
+{
+  margin-top: 1%;
+  width: 35%;
+}
+
+.image1,.image2,.image3,.image4
+{
+  width: 10.5vw;
+	border-width: 10px;
+	border-style:double;
+	border-radius: 20px;
+	border-color:#06F;
+  position: absolute;
+}
+
+.image1
+{
+  margin-left: 18%;
+  margin-top: 18%;
+}
+
+.image2
+{
+  margin-left: 5%;
+  margin-top: 20%;
+}
+
+.image3
+{
+  margin-left: 3%;
+  margin-top: 3%;
+}
+
+.image4
+{
+  margin-left: 15%;
+}

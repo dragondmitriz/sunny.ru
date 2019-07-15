@@ -1,0 +1,51 @@
+.background{
+	background: linear-gradient(160deg, #FFF, #E1EC1C 80%);
+	background-attachment:fixed;
+}
+
+.content{
+	overflow: auto;
+	position: absolute;
+	top: 27%;
+	left: 21%;
+	width: 78%;
+	font-family:"Comic Sans MS", cursive;
+}
+
+.menu{
+	width: 20%;
+	height: 75%;
+	position: absolute;
+	top: 25%;
+}
+
+.text{
+	font-family:"Comic Sans MS", cursive;
+}
+
+.text_title{
+	font-family:"Comic Sans MS", cursive;
+	color:#06F;
+	font-size:24px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+::-webkit-scrollbar{
+	width: 0px;
+}
+
+@media (max-width: 600px){
+	.menu	{
+		width: 100%;
+		position: relative;
+		height: auto;
+		top: 1px;
+	}
+
+	.content{
+		width: 100%;
+		position: relative;
+		left: 1%;
+	}

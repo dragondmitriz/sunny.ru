@@ -1,0 +1,72 @@
+.top{
+	overflow: hidden;
+	width: 98%;
+	height: 25%;
+	position: static;
+}
+
+@media (min-width: 880px){
+	.title{
+		font-size: calc(3.4vh);
+		font-family:"Monotype Corsiva";
+		font-weight:bold;
+		color:#000;
+		text-align:center;
+	}
+
+	.image_title{
+		height: 85%;
+		display: block;
+		margin: auto;
+	}
+
+	.image_sun{
+		height: 25%;
+		right: 1%;
+		position: absolute;
+	}
+}
+
+@media (min-width: 751px) and (max-width: 880px){
+	.title{
+		font-size: calc(3.4vh);
+		font-family:"Monotype Corsiva";
+		font-weight:bold;
+		color:#000;
+		text-align: left;
+		margin-left: 20vw;
+	}
+
+	.image_title{
+		height: 85%;
+		display: block;
+		left: 5px;
+	}
+
+	.image_sun{
+		height: 25%;
+		right: 1%;
+		position: absolute;
+	}
+}
+
+@media (max-width: 750px){
+	.title{
+		font-size: calc(1.5vw + 2vh);
+		font-family:"Monotype Corsiva";
+		font-weight:bold;
+		color:#000;
+		text-align: center;
+	}
+
+	.image_title{
+		height: 85%;
+		width: 90%;
+		display: block;
+		margin: auto;
+	}
+
+	.image_sun{
+		display: none;
+	}
+}
