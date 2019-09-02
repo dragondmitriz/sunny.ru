@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="UTF-8"/>
     <meta http-equiv="content-language" content="ru"/>
-    <meta name="description" content='занятия в центре интеллектуального развития "Солнышко"'/>
+    <meta name="description" content='Занятия в Центре интеллектуального развития "Солнышко"'/>
     <link href="css/layout.css" rel="stylesheet"/>
     <link href="css/lessons.css" rel="stylesheet"/>
     <link href="css/top.css" rel="stylesheet"/>
