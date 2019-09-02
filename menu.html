@@ -1,0 +1,49 @@
+<div id='menu_menu' class="menu-main">Меню</div>
+<a href='index.php'>
+    <div id='menu_main' class="menu-item">Главная</div>
+</a>
+<a href='lessons.php'>
+    <div id='menu_lessons' class="menu-item">Занятия</div>
+</a>
+<a href='applications.php'>
+    <div id='menu_applications' class="menu-item">Запись на занятия</div>
+</a>
+<a href='payment.php'>
+    <div id='menu_payment' class="menu-item">Схема оплаты</div>
+</a>
+<a href='timetable.php'>
+    <div id='menu_timetable' class="menu-item">асписание</div>
+</a>
+<a href='homework.php'>
+    <div id='menu_homework' class="menu-item">Домашнее задание</div>
+</a>
+<a href='media.php'>
+    <div id='menu_media' class="menu-item">Галерея</div>
+</a>
+<a href='whatknow.php'>
+    <div id='menu_whatknow' class="menu-item">Что нужно знать<br>о своем ребенке</div>
+</a>
+<a href='recommendations.php'>
+    <div id='menu_recommendations' class="menu-item">Советы и рекомендации</div>
+</a>
+<a href='faq.php'>
+    <div id='menu_faq' class="menu-item">Вопросы и ответы</div>
+</a>
+<a href='contacts.php'>
+    <div id='menu_contacts' class="menu-item">Контакты</div>
+</a>
+
+<script type="text/javascript" src="lib/JQuery/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $('.menu-main').click(function () {
+        var items = $('.menu-item');
+        var len = items.length;
+        for (var i = 0; i < len; i++) {
+            if (items[i].style.display != 'table-row') {
+                items.eq(i).slideToggle(500);
+            } else {
+                items.eq(i).slideUp(500);
+            }
+        }
+    });
+</script>

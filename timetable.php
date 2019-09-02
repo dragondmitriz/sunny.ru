@@ -9,12 +9,12 @@
 	<body>
 		<div name="top" class=top>
 	    <?php
-	      require "top.php";
+	      require "top.html";
 	    ?>
 	  </div>
 	  <div name="menu" class="menu">
 	    <?php
-	      require "menu.php";
+	      require "menu.html";
 	    ?>
 	  </div>
 		<div class="content">

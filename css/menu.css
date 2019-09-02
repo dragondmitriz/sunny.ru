@@ -1,8 +1,10 @@
+#menu_lessons, #menu_applications, #menu_payment, #menu_timetable, #menu_homework, #menu_media, #menu_whatknow, #menu_recommendations, #menu_faq{
+	display: none;
+}
+
 .menu-item {
-	font-size: calc(0.3vh + 1.2vw);
 	background-image:url(../images/oblako.gif);
 	background-size: 100% 100%;
-	cursor:pointer;
 	padding: 5px;
 }
 
@@ -12,23 +14,19 @@
 	margin: 2%;
 }
 
-@media (min-width: 601px){
-	.menu-main{
-		display: none;
-	}
-
-	.menu-item{
-		display: block;
-	}
+.menu-main {
+    display: none;
 }
 
-@media (max-width: 600px){
+@media screen and (orientation: portrait){
+    .menu-main{
+        display: block;
+    }
 
 	.menu-item,	.menu-main{
 		font-size: calc(5vw);
 		background-image:url(../images/oblako.gif);
 		background-size: 100% 100%;
-		cursor:pointer;
 	}
 
 	.menu-item{

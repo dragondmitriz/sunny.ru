@@ -1,0 +1,71 @@
+body{
+    background: linear-gradient(160deg, #FFF, #E1EC1C 80%);
+    background-attachment: fixed;
+    margin: 0;
+    font-family:"Comic Sans MS", cursive;
+    font-size: 20px;
+}
+
+h1, h3{
+    font-family: "Monotype Corsiva", serif;
+}
+
+header, main, nav, aside{
+    position: relative;
+}
+
+header{
+    position: relative;
+	height: 20vh;
+    margin-bottom: 1vh;
+}
+
+main{
+	display: flex;
+    flex-direction: row;
+	align-items: stretch;
+	justify-content: stretch;
+}
+
+main div{
+    flex-grow: 2;
+}
+
+nav{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    padding: 2px;
+}
+
+aside{
+    width: 20vw;
+    padding-right: 3px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (orientation: portrait){
+    body{
+        font-size: 30px;
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    header, main, nav, aside{
+        width: 100%;
+    }
+
+    nav{
+        align-items: stretch;
+    }
+
+
+}

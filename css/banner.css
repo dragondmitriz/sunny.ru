@@ -1,0 +1,30 @@
+.news-title, .new-title {
+    text-align: center;
+    margin: 0;
+}
+
+.new-title {
+    border-top-style: solid;
+    border-width: thin;
+    cursor: pointer;
+}
+
+.new-content {
+    margin: 0;
+    display: none;
+}
+
+@media screen and (orientation: portrait) {
+    .new-title {
+        font-size: calc(2vh + 2vw);
+        margin: 0;
+    }
+
+    .new-content {
+        font-size: calc(2vh + 2vw);
+    }
+
+    .news-title {
+        font-size: calc(6vw);
+    }
+}

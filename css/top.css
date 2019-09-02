@@ -1,72 +1,63 @@
 .top{
-	overflow: hidden;
-	width: 98%;
-	height: 25%;
-	position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    position: absolute;
+    height: 100%;
+    width: 99%;
+    padding: 5px;
 }
 
-@media (min-width: 880px){
-	.title{
-		font-size: calc(3.4vh);
-		font-family:"Monotype Corsiva";
-		font-weight:bold;
-		color:#000;
-		text-align:center;
-	}
-
-	.image_title{
-		height: 85%;
-		display: block;
-		margin: auto;
-	}
-
-	.image_sun{
-		height: 25%;
-		right: 1%;
-		position: absolute;
-	}
+.logotype{
+    flex-shrink: 2;
+    height: 100%;
+    width: 10%;
+    margin: 0;
+    position: relative;
+    background-size: contain;
+    background-image: url("../images/sun.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
 }
 
-@media (min-width: 751px) and (max-width: 880px){
-	.title{
-		font-size: calc(3.4vh);
-		font-family:"Monotype Corsiva";
-		font-weight:bold;
-		color:#000;
-		text-align: left;
-		margin-left: 20vw;
-	}
-
-	.image_title{
-		height: 85%;
-		display: block;
-		left: 5px;
-	}
-
-	.image_sun{
-		height: 25%;
-		right: 1%;
-		position: absolute;
-	}
+.logotype a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
-@media (max-width: 750px){
-	.title{
-		font-size: calc(1.5vw + 2vh);
-		font-family:"Monotype Corsiva";
-		font-weight:bold;
-		color:#000;
-		text-align: center;
-	}
+.title{
+    height: 100%;
+    flex-grow: 2;
+}
 
-	.image_title{
-		height: 85%;
-		width: 90%;
-		display: block;
-		margin: auto;
-	}
+.text-title{
+    font-size: calc(3.4vh);
+    font-family: "Monotype Corsiva", serif;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
 
-	.image_sun{
-		display: none;
-	}
+.image-title{
+    height: 85%;
+    position: relative;
+    background-image: url("../images/title.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.image-title a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (orientation: portrait) {
+    .logotype{
+        display: none;
+    }
 }

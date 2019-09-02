@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="817cb2a4-af34-494b-9998-7ef6e471c0d3" name="ru-center" url="http://ftp.h907183857.nichost.ru">
+        <fileTransfer host="ftp.h907183857.nichost.ru" port="22" rootFolder="/home/h907183857" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions controlEncoding="utf-8" dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -36,16 +36,17 @@
 	width: 0px;
 }
 
-@media (max-width: 600px){
-	.menu	{
+@media (max-width: 600px) {
+	.menu {
 		width: 100%;
 		position: relative;
 		height: auto;
 		top: 1px;
 	}
 
-	.content{
+	.content {
 		width: 100%;
 		position: relative;
 		left: 1%;
 	}
+}
