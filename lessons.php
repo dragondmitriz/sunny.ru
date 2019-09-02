@@ -21,7 +21,54 @@
         <?php require "menu.html"; ?>
     </nav>
     <div class="lessons">
-
+        <!--Ранее развитие-->
+        <div class="lesson">
+            <div class="lesson-textblock">
+                <div class="lesson-name">Ранее развитие (1,6-2 лет)</div>
+                <div class="lesson-description"></div>
+            </div>
+            <div class="lesson-image"></div>
+        </div>
+        <!--Развивающшие игры-->
+        <div class="lesson">
+            <div class="lesson-textblock">
+                <div class="lesson-name">Развивающшие игры (2-4 лет)</div>
+                <div class="lesson-description"></div>
+            </div>
+            <div class="lesson-image"></div>
+        </div>
+        <!--Подготовка к школе-->
+        <div class="lesson">
+            <div class="lesson-textblock">
+                <div class="lesson-name">Подготовка к школе (5-7 лет)</div>
+                <div class="lesson-description"></div>
+            </div>
+            <div class="lesson-image"></div>
+        </div>
+        <!--Ритмопластика-->
+        <div class="lesson">
+            <div class="lesson-textblock">
+                <div class="lesson-name">Ритмопластика (2-3 лет)</div>
+                <div class="lesson-description"></div>
+            </div>
+            <div class="lesson-image"></div>
+        </div>
+        <!--Художественная лепка-->
+        <div class="lesson">
+            <div class="lesson-textblock">
+                <div class="lesson-name">Художественная лепка (с 3-х лет и младшие школьники)</div>
+                <div class="lesson-description"></div>
+            </div>
+            <div class="lesson-image"></div>
+        </div>
+        <!--Художественная лепка-->
+        <div class="lesson">
+            <div class="lesson-textblock">
+                <div class="lesson-name">Художественная лепка (2-4 класс)</div>
+                <div class="lesson-description"></div>
+            </div>
+            <div class="lesson-image"></div>
+        </div>
     </div>
 </main>
 </body>
