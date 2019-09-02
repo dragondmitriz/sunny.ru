@@ -1,37 +1,3 @@
-.lesson_image{
-	width: 25%;
-	border-width: 10px;
-	border-style:double;
-	border-radius: 20px;
-	border-color:#06F;
-}
-
-.teacher_title{
-	padding-top: 7pt;
-	font-family:"Comic Sans MS", cursive;
-	font-weight: 900;
-	color:#06F;
-}
-
-.theacher_right{
-	color:#06F;
-}
-
-.theacher_left{
-	color:#06F;
-	margin-left: 26%;
-}
-
-ul{
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-@media (max-width: 600px){
-	.lesson_image{
-		width: 90%;
-		border-width: 10px;
-		border-style:double;
-		border-color:#06F;
-	}
+.lesson-name{
+    text-align: center;
 }
