@@ -27,11 +27,13 @@
 }
 
 #lesson3 .lesson-image{
+    display: none;
     float: right;
     background-image: url("../content/lessons/3.jpg");
 }
 
 #lesson4 .lesson-image{
+    display: none;
     float: left;
     background-image: url("../content/lessons/4.jpg");
 }
