@@ -22,7 +22,7 @@
     </nav>
     <div class="lessons">
         <!--Ранее развитие-->
-        <div class="lesson">
+        <div id="lesson1" class="lesson">
                 <h2 class="lesson-name">Ранее развитие (1,6-2 лет)</h2>
                 <div class="lesson-description">
 
@@ -30,7 +30,7 @@
             <div class="lesson-image"></div>
         </div>
         <!--Развивающшие игры-->
-        <div class="lesson">
+        <div id="lesson2" class="lesson">
                 <h2 class="lesson-name">Развивающшие игры (2-4 лет)</h2>
                 <div class="lesson-description">
                     Программа:
@@ -53,7 +53,7 @@
             <div class="lesson-image"></div>
         </div>
         <!--Подготовка к школе-->
-        <div class="lesson">
+        <div id="lesson3" class="lesson">
                 <h2 class="lesson-name">Подготовка к школе (5-7 лет)</h2>
                 <div class="lesson-description">
                     Программа:
@@ -87,7 +87,7 @@
             <div class="lesson-image"></div>
         </div>
         <!--Ритмопластика-->
-        <div class="lesson">
+        <div id="lesson4" class="lesson">
                 <h2 class="lesson-name">Ритмопластика (2-3 лет)</h2>
                 <div class="lesson-description">
 
@@ -95,7 +95,7 @@
             <div class="lesson-image"></div>
         </div>
         <!--Художественная лепка-->
-        <div class="lesson">
+        <div id="lesson5" class="lesson">
                 <h2 class="lesson-name">Художественная лепка (с 3-х лет и младшие школьники)</h2>
                 <div class="lesson-description">
                     <u>Продолжительность занятия 1 час 1 раз в неделю (суббота).</u>
@@ -103,7 +103,7 @@
             <div class="lesson-image"></div>
         </div>
         <!--Помощь школьнику-->
-        <div class="lesson">
+        <div id="lesson6" class="lesson">
                 <h2 class="lesson-name">Помощь школьнику (1-4 класс)</h2>
                 <div class="lesson-description">
                     Ликвидация пробелов знаний школьной программы.
