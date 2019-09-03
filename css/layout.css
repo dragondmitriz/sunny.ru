@@ -6,6 +6,10 @@ body{
     font-size: 20px;
 }
 
+ul{
+    list-style-image: url("/images/spis-mark.png");
+}
+
 h1, h2, h3{
     font-family: "Monotype Corsiva", serif;
 }
