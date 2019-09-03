@@ -6,7 +6,7 @@ body{
     font-size: 20px;
 }
 
-h1, h3{
+h1, h2, h3{
     font-family: "Monotype Corsiva", serif;
 }
 
@@ -32,6 +32,7 @@ main div{
 }
 
 nav{
+    flex-shrink: 0;
     width: 20vw;
     display: flex;
     flex-direction: column;
