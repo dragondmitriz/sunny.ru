@@ -3,6 +3,10 @@ p{
     text-decoration: underline;
 }
 
+h1{
+    text-align: center;
+}
+
 .lesson{
     position: relative;
     width: 100%;
@@ -15,40 +19,35 @@ p{
 .lesson-image{
     position: relative;
     top: 1px;
-    width: 250px;
-    height: 400px;
-    background-position: center;
-    background-size: cover;
+    background: no-repeat center;
+    background-size: contain;
+    margin: 5px;
 }
 
 #lesson1 .lesson-image{
+    width: 400px;
+    height: 300px;
     float: right;
     background-image: url("../content/lessons/1.jpg");
 }
 
-#lesson2 .lesson-image{
-    float: left;
-    background-image: url("../content/lessons/2.jpg");
-}
-
 #lesson3 .lesson-image{
-    display: none;
+    width: 280px;
+    height: 400px;
     float: right;
     background-image: url("../content/lessons/3.jpg");
 }
 
 #lesson4 .lesson-image{
-    display: none;
+    width: 450px;
+    height: 300px;
     float: left;
     background-image: url("../content/lessons/4.jpg");
 }
 
 #lesson5 .lesson-image{
+    width: 350px;
+    height: 440px;
     float: right;
     background-image: url("../content/lessons/5.jpg");
-}
-
-#lesson6 .lesson-image{
-    float: left;
-    background-image: url("../content/lessons/6.jpg");
 }
