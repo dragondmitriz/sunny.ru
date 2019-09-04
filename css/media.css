@@ -3,9 +3,7 @@
   max-width: 100%;
   height: 150px;
   margin: 0.5%;
-  border-width: 10px;
-	border-style:double;
-	border-color:#06F;
+  border: 10px double #06F;
   border-radius: 20px;
 }
 
@@ -17,4 +15,49 @@
   .photo{
     height: 50px;
   }
+}
+
+#gallery{
+  position: fixed;
+  top: 1%;
+  left: 5%;
+  width: 90%;
+  height: 98%;
+  box-shadow: 0 0 10px #000;
+  background: linear-gradient(160deg, #FFF, #E1EC1C 80%) fixed;
+  display: none;
+}
+
+#gallery-main{
+  padding: 3px;
+  height: 99%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#gallery-image, #gallery-button-left, #gallery-button-right{
+  height: 100%;
+  background: no-repeat center;
+  background-size: contain;
+}
+
+#gallery-image{
+  width: 60%;
+}
+
+#gallery-button-left, #gallery-button-right{
+  width: 20%;
+  margin: 5px;
+}
+
+#gallery-button-close{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url("../images/icon_close.png") no-repeat center;
+  background-size: contain;
+  right: 0;
+  top: 0;
+  z-index: 2;
 }
