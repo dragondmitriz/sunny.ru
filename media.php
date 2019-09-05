@@ -52,7 +52,7 @@
     var indx_selectedItem = 0;
 
     $(document).ready(function () {
-        //нажатие на изображение в галерее
+        //обработка нажатия на изображение в галерее
         $('.photo').click(function () {
             let path_select_image = $(this).attr('src');//сохраняем адрес выбранного изображения
             $('#gallery-image').css('background-image', 'url(' + path_select_image.slice(0, -4) + '!' + path_select_image.slice(-4) + ')');//установка выбранного изображения на блок отображения изображения в Галерее
@@ -66,23 +66,28 @@
                 url = url.slice(0, -4) + '!' + url.slice(-4);//форматирование адреса изображения для получения адреса к его более выскогокачесвенной копии, отмеченной восклицательным знаком в конце имени файла
                 collectionGallery[indx] = 'url(' + url + ')';
             });
+            //присваивание адреса изображения для правого блока переключения на следующее изображение из коллекции адресов высококачественных изображений
             if (indx_selectedItem === collectionGallery.length - 1) {
                 $('#gallery-button-right').css('background-image', collectionGallery[0]);
             } else {
                 $('#gallery-button-right').css('background-image', collectionGallery[indx_selectedItem + 1]);
             }
+            //присваивание адреса изображения для левого блока переключения на следующее изображение из коллекции адресов высококачественных изображений
             if (indx_selectedItem === 0) {
                 $('#gallery-button-left').css('background-image', collectionGallery[collectionGallery.length - 1]);
             } else {
                 $('#gallery-button-left').css('background-image', collectionGallery[indx_selectedItem - 1]);
             }
-            $('#gallery').fadeIn(400);
+            $('#gallery').fadeIn(400);//проявление "Галереи"
         });
-
+        //обработка нажатия на
         $('#gallery-button-close').click(function () {
             $("#gallery").fadeOut(400);
         });
-
+        //обработка нажатия на левое изображения в просмотре Галереи
+        /*проверяет позицию текущего изображения в массиве коллекции адресов
+        * смещает соответсвующе индекс текущего изображения
+        * и присваивает новые изображения для боковых блоков навигации*/
         $('#gallery-button-left').click(function () {
             if (indx_selectedItem === 0) {
                 indx_selectedItem = collectionGallery.length - 1;
@@ -99,7 +104,10 @@
             }
             $('#gallery-image').css('background-image', collectionGallery[indx_selectedItem]);
         });
-
+        //обработка нажатия на правое изображение в просмотре Галереи
+        /*проверяет позицию текущего изображения в массиве коллекции адресов
+        * смещает соответсвующе индекс текущего изображения
+        * и присваивает новые изображения для боковых блоков навигации*/
         $('#gallery-button-right').click(function () {
             if (indx_selectedItem === collectionGallery.length - 1) {
                 indx_selectedItem = 0;
