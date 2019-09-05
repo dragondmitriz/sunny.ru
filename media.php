@@ -100,12 +100,12 @@
         * отвечает за анимацию блоков при переключении картинок
         * позволяет расширить коллекцию оперируемых изображений на 1,
         * чтобы полноценно отображать анимацию с новым изображением*/
-        if (indx_selectedItem - 2 < 0) {
-            $('#ghoast').css('background-image', collectionGallery[collectionGallery.length + indx_selectedItem - 3]);
-        } else {
-            $('#ghoast').css('background-image', collectionGallery[indx_selectedItem - 2]);
-        }
-        $('#ghoast').attr('class', 'gallery-button');//для выравниваниия расположения изображений до и после анимации, так как кнопки галереи имеют отступы в 5px, что выдаёт "призрака" и тот выдаёт своё существование
+        $('#ghoast')
+            .css('background-image', function () {
+                if (indx_selectedItem - 2 < 0) return collectionGallery[collectionGallery.length + indx_selectedItem - 3];
+                return collectionGallery[indx_selectedItem - 2];
+            })
+            .attr('class', 'gallery-button');//для выравниваниия расположения изображений до и после анимации, так как кнопки галереи имеют отступы в 5px, что выдаёт "призрака" и тот выдаёт своё существование
 
         //анимация переключения изображений
         let speedAnimation = 400;
@@ -156,12 +156,11 @@
             .css('width', '20%')
             .css('background-image', $('#gallery-button-right').css('background-image'));
         $('#gallery-button-right')
-            .css('width', '0');
-        if (indx_selectedItem + 2 > collectionGallery.length - 1) {
-            $('#gallery-button-right').css('background-image', collectionGallery[indx_selectedItem + 1 - collectionGallery.length]);
-        } else {
-            $('#gallery-button-right').css('background-image', collectionGallery[indx_selectedItem + 2]);
-        }
+            .css('width', '0')
+            .css('background-image', function () {
+                if (indx_selectedItem + 2 > collectionGallery.length - 1) return collectionGallery[indx_selectedItem + 1 - collectionGallery.length];
+                return collectionGallery[indx_selectedItem + 2]
+            });
 
         //анимация переключения изображений
         let speedAnimation = 400;
@@ -176,7 +175,8 @@
         } else {
             indx_selectedItem++;
         }
-    });
+    })
+    ;
 </script>
 </body>
 </html>
