@@ -1,6 +1,5 @@
 body{
-    background: linear-gradient(160deg, #FFF, #E1EC1C 80%);
-    background-attachment: fixed;
+    background: linear-gradient(160deg, #FFF, #E1EC1C 80%) fixed;
     margin: 0;
     font-family:"Comic Sans MS", cursive;
     font-size: 20px;

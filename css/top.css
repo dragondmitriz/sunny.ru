@@ -15,11 +15,8 @@
     width: 10%;
     margin: 0;
     position: relative;
+    background: url("../images/sun.gif") no-repeat center;
     background-size: contain;
-    background-image: url("../images/sun.gif");
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0;
 }
 
 .logotype a{
@@ -44,10 +41,8 @@
 .image-title{
     height: 85%;
     position: relative;
-    background-image: url("../images/title.gif");
+    background: url("../images/title.gif") no-repeat center;
     background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .image-title a{
