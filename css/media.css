@@ -43,12 +43,12 @@
 }
 
 .gallery-image {
-    flex-grow: 2;
+    flex-grow: 0;
     width: 60%;
 }
 
 .gallery-button {
-    flex-grow: 1;
+    flex-grow: 0;
     width: 20%;
     margin: 5px;
 }
@@ -66,4 +66,5 @@
 
 #ghoast {
     width: 0;
+    flex-grow: 0;
 }

@@ -37,7 +37,7 @@
         ?>
         <div id='gallery'>
             <div id='gallery-main' class='gallery-main'>
-                <div id='ghoast' class="gallery-button"></div>
+                <div id='ghoast'></div>
                 <div id='gallery-button-left' class='gallery-button'></div>
                 <div id='gallery-image' class='gallery-image'></div>
                 <div id='gallery-button-right' class='gallery-button'></div>
@@ -100,9 +100,10 @@
             } else {
                 $('#ghoast').css('background-image', collectionGallery[indx_selectedItem - 2]);
             }
+            $('#ghoast').attr('class','gallery-button');
             //анимация переключения изображений
             let speedAnimation = 400;
-            $('#gallery-button-right').width('15%');//фикс секундного увеличения картинки
+            //$('#gallery-button-right').width('15%');//фикс секундного увеличения картинки
             $('#gallery-button-right').animate({width: '0'}, speedAnimation);
             $('#gallery-button-left').animate({width: '60%'}, speedAnimation);
             $('#gallery-image').animate({width: '20%'}, speedAnimation);
@@ -122,7 +123,8 @@
                     .css('background-image', leftImage);
                 $('#ghoast')
                     .css('width', '0')
-                    .css('background-image','');
+                    .css('background-image','')
+                    .attr('class','');
             });
             //вычисление индекса нового основного изображения
             if (indx_selectedItem === 0) {
