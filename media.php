@@ -100,10 +100,9 @@
             } else {
                 $('#ghoast').css('background-image', collectionGallery[indx_selectedItem - 2]);
             }
-            $('#ghoast').attr('class','gallery-button');
+            $('#ghoast').attr('class', 'gallery-button');//для выравниваниия расположения изображений до и после анимации, так как кнопки галереи имеют отступы в 5px, что выдаёт "призрака" и тот выдаёт своё существование
             //анимация переключения изображений
             let speedAnimation = 400;
-            //$('#gallery-button-right').width('15%');//фикс секундного увеличения картинки
             $('#gallery-button-right').animate({width: '0'}, speedAnimation);
             $('#gallery-button-left').animate({width: '60%'}, speedAnimation);
             $('#gallery-image').animate({width: '20%'}, speedAnimation);
@@ -124,7 +123,7 @@
                 $('#ghoast')
                     .css('width', '0')
                     .css('background-image','')
-                    .attr('class','');
+                    .attr('class', '');//делаем призрака призраком)
             });
             //вычисление индекса нового основного изображения
             if (indx_selectedItem === 0) {
