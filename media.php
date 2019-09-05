@@ -52,15 +52,19 @@
     var indx_selectedItem = 0;
 
     $(document).ready(function () {
+        //нажатие на изображение в галерее
         $('.photo').click(function () {
-            var path_select_image = $(this).attr('src');
-            $('#gallery-image').css('background-image', 'url(' + path_select_image + ')');
-            $('#gallery-collection').children().remove();
+            let path_select_image = $(this).attr('src');//сохраняем адрес выбранного изображения
+            $('#gallery-image').css('background-image', 'url(' + path_select_image.slice(0, -4) + '!' + path_select_image.slice(-4) + ')');//установка выбранного изображения на блок отображения изображения в Галерее
+            collectionGallery.length = 0;//очистка коллекции адресов изображений высокого разрешения
+            //перебор все адресов изображений в блоке мероприятия,в котором находилось выбраное пользователем изображение, и создание коллекции с адресами изоражений более высокого разрешения
             $(this).parent().children('.photo').each(function (indx, element) {
-                collectionGallery[indx] = 'url(' + $(element).attr('src') + ')';
-                if ($(element).attr('src') === path_select_image) {
+                let url = $(element).attr('src');
+                if (url === path_select_image) {
                     indx_selectedItem = indx;
                 }
+                url = url.slice(0, -4) + '!' + url.slice(-4);//форматирование адреса изображения для получения адреса к его более выскогокачесвенной копии, отмеченной восклицательным знаком в конце имени файла
+                collectionGallery[indx] = 'url(' + url + ')';
             });
             if (indx_selectedItem === collectionGallery.length - 1) {
                 $('#gallery-button-right').css('background-image', collectionGallery[0]);
