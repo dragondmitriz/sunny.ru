@@ -36,10 +36,11 @@
         }
         ?>
         <div id='gallery'>
-            <div id='gallery-main'>
-                <div id='gallery-button-left'></div>
-                <div id='gallery-image'></div>
-                <div id='gallery-button-right'></div>
+            <div id='gallery-main' class='gallery-main'>
+                <div id='ghoast' class="gallery-button"></div>
+                <div id='gallery-button-left' class='gallery-button'></div>
+                <div id='gallery-image' class='gallery-image'></div>
+                <div id='gallery-button-right' class='gallery-button'></div>
                 <div id='gallery-button-close'></div>
             </div>
         </div>
@@ -89,20 +90,46 @@
         * смещает соответсвующе индекс текущего изображения
         * и присваивает новые изображения для боковых блоков навигации*/
         $('#gallery-button-left').click(function () {
+            //загрузка нового изображения в "призрака"
+            /*"призрак" - блок с шириной 0 в начале контейнера "Галереи"(слева)
+            * отвечает за анимацию блоков при переключении картинок
+            * позволяет расширить коллекцию оперируемых изображений на 1,
+            * чтобы полноценно отображать анимацию с новым изображением*/
+            if (indx_selectedItem - 2 < 0) {
+                $('#ghoast').css('background-image', collectionGallery[collectionGallery.length + indx_selectedItem - 3]);
+            } else {
+                $('#ghoast').css('background-image', collectionGallery[indx_selectedItem - 2]);
+            }
+            //анимация переключения изображений
+            let speedAnimation = 400;
+            $('#gallery-button-right').width('15%');//фикс секундного увеличения картинки
+            $('#gallery-button-right').animate({width: '0'}, speedAnimation);
+            $('#gallery-button-left').animate({width: '60%'}, speedAnimation);
+            $('#gallery-image').animate({width: '20%'}, speedAnimation);
+            $('#ghoast').animate({width: '20%'}, speedAnimation, function () {
+                //"Квантовая телепортация" после анимации
+                let rightImage = $('#gallery-image').css('background-image');
+                let mainImage = $('#gallery-button-left').css('background-image');
+                let leftImage = $('#ghoast').css('background-image');
+                $('#gallery-button-right')
+                    .css('width', '20%')
+                    .css('background-image', rightImage);
+                $('#gallery-image')
+                    .css('width', '60%')
+                    .css('background-image', mainImage);
+                $('#gallery-button-left')
+                    .css('width', '20%')
+                    .css('background-image', leftImage);
+                $('#ghoast')
+                    .css('width', '0')
+                    .css('background-image','');
+            });
+            //вычисление индекса нового основного изображения
             if (indx_selectedItem === 0) {
                 indx_selectedItem = collectionGallery.length - 1;
-                $('#gallery-button-left').css('background-image', collectionGallery[indx_selectedItem - 1]);
-                $('#gallery-button-right').css('background-image', collectionGallery[0]);
             } else {
                 indx_selectedItem--;
-                $('#gallery-button-right').css('background-image', collectionGallery[indx_selectedItem + 1]);
-                if (indx_selectedItem === 0) {
-                    $('#gallery-button-left').css('background-image', collectionGallery[collectionGallery.length - 1]);
-                } else {
-                    $('#gallery-button-left').css('background-image', collectionGallery[indx_selectedItem - 1]);
-                }
             }
-            $('#gallery-image').css('background-image', collectionGallery[indx_selectedItem]);
         });
         //обработка нажатия на правое изображение в просмотре Галереи
         /*проверяет позицию текущего изображения в массиве коллекции адресов
