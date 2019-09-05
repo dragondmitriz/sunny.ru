@@ -30,7 +30,7 @@
             }
             print "<div class='block_photo'>";
             while (file_exists("content//media//" . $index_dir . "//" . ++$index_file . ".jpg")) {
-                print "<img class='photo' src='content//media//" . $index_dir . "//" . $index_file . ".jpg'></img>";
+                print "<img class='photo' src='content//media//" . $index_dir . "//" . $index_file . ".jpg'/>";
             }
             print "</div>";
         }
@@ -122,7 +122,7 @@
                     .css('background-image', leftImage);
                 $('#ghoast')
                     .css('width', '0')
-                    .css('background-image','')
+                    .css('background-image', '')
                     .attr('class', '');//делаем призрака призраком)
             });
             //вычисление индекса нового основного изображения
