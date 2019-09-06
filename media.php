@@ -49,8 +49,8 @@
 
 <script type="text/javascript" src="lib/JQuery/jquery-3.3.1.js"></script>
 <script type="text/javascript">
-    var collectionGallery = [];
-    var indx_selectedItem = 0;
+    let collectionGallery = [];
+    let indx_selectedItem = 0;
 
     //обработка нажатия на изображение в галерее
     $('.photo').click(function () {
@@ -95,40 +95,53 @@
     * и присваивает новые изображения для боковых блоков навигации*/
     $('#gallery-button-left').click(function () {
 
-        //загрузка нового изображения в "призрака"
+        //кэширование селекторов
+        let ghoast$ = $('#ghoast');
+        let rightButton$ = $('#gallery-button-right');
+        let leftButtoin$ = $('#gallery-button-left');
+        let image$ = $('#gallery-image');
+
         /*"призрак" - блок с шириной 0 в начале контейнера "Галереи"(слева)
         * отвечает за анимацию блоков при переключении картинок
         * позволяет расширить коллекцию оперируемых изображений на 1,
         * чтобы полноценно отображать анимацию с новым изображением*/
-        $('#ghoast')
+        ghoast$
+        //загрузка нового изображения в "призрака"
             .css('background-image', function () {
                 if (indx_selectedItem - 2 < 0) return collectionGallery[collectionGallery.length + indx_selectedItem - 3];
                 return collectionGallery[indx_selectedItem - 2];
             })
-            .attr('class', 'gallery-button');//для выравниваниия расположения изображений до и после анимации, так как кнопки галереи имеют отступы в 5px, что выдаёт "призрака" и тот выдаёт своё существование
+            //для выравниваниия расположения изображений до и после анимации, так как кнопки галереи имеют отступы в 5px, что выдаёт "призрака" и тот выдаёт своё существование
+            .attr('class', 'gallery-button');
 
         //анимация переключения изображений
         let speedAnimation = 400;
-        $('#gallery-button-right').animate({width: '0'}, speedAnimation / 2);
-        $('#gallery-button-left').animate({width: '60%'}, speedAnimation);
-        $('#gallery-image').animate({width: '20%'}, speedAnimation);
-        $('#ghoast').animate({width: '20%'}, speedAnimation, function () {
+        rightButton$
+            .animate({width: '0'}, speedAnimation / 2);
+        leftButtoin$
+            .animate({width: '60%'}, speedAnimation);
+        image$
+            .animate({width: '20%'}, speedAnimation);
+        ghoast$
+            .animate({width: '20%'}, speedAnimation)
+            .promise()
+            .done(function () {
 
-            //"Квантовая телепортация" после анимации
-            $('#gallery-button-right')
-                .css('width', '20%')
-                .css('background-image', $('#gallery-image').css('background-image'));
-            $('#gallery-image')
-                .css('width', '60%')
-                .css('background-image', $('#gallery-button-left').css('background-image'));
-            $('#gallery-button-left')
-                .css('width', '20%')
-                .css('background-image', $('#ghoast').css('background-image'));
-            $('#ghoast')
-                .css('width', '0')
-                .css('background-image', '')
-                .attr('class', '');//делаем призрака призраком)
-        });
+                //"Квантовая телепортация" после анимации
+                rightButton$
+                    .css('width', '20%')
+                    .css('background-image', image$.css('background-image'));
+                image$
+                    .css('width', '60%')
+                    .css('background-image', leftButtoin$.css('background-image'));
+                leftButtoin$
+                    .css('width', '20%')
+                    .css('background-image', ghoast$.css('background-image'));
+                ghoast$
+                    .css('width', '0')
+                    .css('background-image', '')
+                    .attr('class', '');//делаем призрака призраком)
+            });
 
         //вычисление индекса нового основного изображения
         if (indx_selectedItem === 0) {
@@ -144,32 +157,43 @@
     * и присваивает новые изображения для боковых блоков навигации*/
     $('#gallery-button-right').click(function () {
 
+        //кэширование селекторов
+        let ghoast$ = $('#ghoast');
+        let rightButton$ = $('#gallery-button-right');
+        let leftButtoin$ = $('#gallery-button-left');
+        let image$ = $('#gallery-image');
+
         //"Квантовая телепортация"
-        $('#ghoast')
+        ghoast$
             .css('width', '20%')
-            .css('background-image', $('#gallery-button-left').css('background-image'))
+            .css('background-image', leftButtoin$.css('background-image'))
             .attr('class', 'gallery-button');
-        $('#gallery-button-left')
+        leftButtoin$
             .css('width', '60%')
-            .css('background-image', $('#gallery-image').css('background-image'));
-        $('#gallery-image')
+            .css('background-image', image$.css('background-image'));
+        image$
             .css('width', '20%')
-            .css('background-image', $('#gallery-button-right').css('background-image'));
-        $('#gallery-button-right')
+            .css('background-image', rightButton$.css('background-image'));
+        rightButton$
             .css('width', '0')
             .css('background-image', function () {
-                if (indx_selectedItem + 2 > collectionGallery.length - 1) return collectionGallery[indx_selectedItem + 1 - collectionGallery.length];
+                if (indx_selectedItem + 2 > collectionGallery.length - 1)
+                    return collectionGallery[indx_selectedItem + 1 - collectionGallery.length];
                 return collectionGallery[indx_selectedItem + 2]
             });
 
         //анимация переключения изображений
         let speedAnimation = 400;
-        $('#ghoast').animate({width: '0'}, speedAnimation / 2, function () {
-            $('#ghoast').attr('class', '')
-        });
-        $('#gallery-button-left').animate({width: '20%'}, speedAnimation);
-        $('#gallery-image').animate({width: '60%'}, speedAnimation);
-        $('#gallery-button-right').animate({width: '20%'}, speedAnimation);
+        ghoast$
+            .animate({width: '0'}, speedAnimation / 2)
+            .promise()
+            .done(function () {
+                $(this)
+                    .attr('class', '')
+            });
+        leftButtoin$.animate({width: '20%'}, speedAnimation);
+        image$.animate({width: '60%'}, speedAnimation);
+        rightButton$.animate({width: '20%'}, speedAnimation);
 
         //вычисление индекса нового основного изображения
         if (indx_selectedItem === collectionGallery.length - 1) {
