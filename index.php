@@ -10,6 +10,7 @@
     <link href="css/top.css" rel="stylesheet"/>
     <link href="css/menu.css" rel="stylesheet"/>
     <link href="css/banner.css" rel="stylesheet"/>
+    <link href="css/contactsCorner.css" rel="stylesheet"/>
     <link rel="SHORTCUT ICON" href="images/sun.gif" type="image/gif">
     <title>Солнышко</title>
 </head>
@@ -38,5 +39,6 @@
         <?php require "banner.php"; ?>
     </aside>
 </main>
+<?php require "contactsCorner.html"; ?>
 </body>
 </html>

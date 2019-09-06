@@ -9,6 +9,7 @@
     <link href="css/lessons.css" rel="stylesheet"/>
     <link href="css/top.css" rel="stylesheet"/>
     <link href="css/menu.css" rel="stylesheet"/>
+    <link href="css/contactsCorner.css" rel="stylesheet"/>
     <link rel="SHORTCUT ICON" href="images/sun.gif" type="image/gif">
     <title>Солнышко</title>
 </head>
@@ -188,5 +189,6 @@
         </div>
     </div>
 </main>
+<?php require "contactsCorner.html"; ?>
 </body>
 </html>

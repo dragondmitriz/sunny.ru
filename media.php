@@ -9,6 +9,7 @@
     <link href="css/media.css" rel="stylesheet"/>
     <link href="css/top.css" rel="stylesheet"/>
     <link href="css/menu.css" rel="stylesheet"/>
+    <link href="css/contactsCorner.css" rel="stylesheet"/>
     <link rel="SHORTCUT ICON" href="images/sun.gif" type="image/gif">
     <title>Солнышко</title>
 </head>
@@ -46,6 +47,7 @@
         </div>
     </div>
 </main>
+<?php require "contactsCorner.html"; ?>
 
 <script type="text/javascript" src="lib/JQuery/jquery-3.3.1.js"></script>
 <script type="text/javascript">
