@@ -164,7 +164,9 @@
 
         //анимация переключения изображений
         let speedAnimation = 400;
-        $('#ghoast').animate({width: '0'}, speedAnimation / 2);
+        $('#ghoast').animate({width: '0'}, speedAnimation / 2, function () {
+            $('#ghoast').attr('class', '')
+        });
         $('#gallery-button-left').animate({width: '20%'}, speedAnimation);
         $('#gallery-image').animate({width: '60%'}, speedAnimation);
         $('#gallery-button-right').animate({width: '20%'}, speedAnimation);
