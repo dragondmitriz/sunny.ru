@@ -21,7 +21,7 @@
         <p>
             Контактный телефон:<br/>
             Иванова Ирина Анатольевна: <a href="tel:+79854465869">+7 (985) 446-58-69</a><br/>
-            Электронная почта: <a href="mailto:club-sunny@mail.ru">club-sunny@mail.ru</a><br/>
+            Электронная почта: <a href="mailto:club-sunny@club-sunny.ru">club-sunny@club-sunny.ru</a><br/>
             Адрес центра: Россия, г. Москва, п. Кокошкино, д. п. Кокошкино, ул. Дзержинского, д. 6, оф. 21
         </p>
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A131dad4e83b449306f7c21d71e02b28f62021c44954a783b86d89f70d1ab9a58&amp;width=806&amp;height=570&amp;lang=ru_RU&amp;scroll=true"></script>
