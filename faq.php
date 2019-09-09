@@ -42,16 +42,17 @@
 <script type="text/javascript" src="lib/JQuery/jquery-3.3.1.js"></script>
 <script type="text/javascript">
     $('.question').click(function () {
-        let active_answer = $(this).next('.answer');
-        if (active_answer.attr('id') != 'active_answer') {
-            $('#active_answer').slideUp(300);
-            $('#active_answer').attr('id', '');
-            active_answer.slideToggle(600);
-            active_answer.attr('id', 'active_answer');
+        let new_active_answer$ = $(this).next('.answer');
+        let active_answer$ = $('#active_answer');
+        if (new_active_answer$.attr('id') != 'active_answer') {
+            active_answer$.slideUp(300);
+            active_answer$.attr('id', '');
+            new_active_answer$.slideToggle(600);
+            new_active_answer$.attr('id', 'active_answer');
         }
         else {
-            $('#active_answer').slideUp(300);
-            $('#active_answer').attr('id', '');
+            active_answer$.slideUp(300);
+            active_answer$.attr('id', '');
         }
     });
 
