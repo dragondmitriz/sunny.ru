@@ -1,100 +1,77 @@
-<?php
-  require_once 'lib/PHPMailer/PHPMailerAutoload.php';
-  $message=null;
-  if (isset($_POST['mail']) && isset($_POST['question']))
-  {
-    $question=$_POST['question'];
-    $question=wordwrap($question,70,'\r\n');
-    $mail = new PHPMailer;
-    // Настройка
-    $mail->isSMTP();
-    $mail->SMTPAuth = true;
-    $mail->SMTPDebug = 0;
-    $mail->Host = "ssl://smtp.mail.com";
-    $mail->Port = 465;
-    $mail->Username = "sunny.education_center@mail.ru";
-    $mail->Password = "Makeenko1";
-    // От кого
-    $mail->setFrom($_POST['mail']);
-    // Кому
-    $mail->addAddress('sunny.education_center@mail.ru', '');
-    // Тема письма
-    $mail->Subject = 'Вопрос';
-    // Тело письма
-    $mail->msgHTML($question);
-    // Отправка
-    if ($mail->send())
-    {
-      $message='Вопрос успешно отправлен к нам. Ожидайте ответа на указанном вами почтовом ящике.';
-    }
-    else
-    {
-      $message='Возникла ошибка при отправке вопроса. Проверьте интернет-соденение и корректность введенных данных.';
-    }
-  }
-?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="content-language" content="ru"/>
+    <meta name="description" content='Центр интеллектуального развития "Солнышко"'/>
+    <link href="css/layout.css" rel="stylesheet"/>
+    <link href="css/faq.css" rel="stylesheet"/>
+    <link href="css/top.css" rel="stylesheet"/>
+    <link href="css/menu.css" rel="stylesheet"/>
+    <link href="css/banner.css" rel="stylesheet"/>
+    <link href="css/contactsCorner.css" rel="stylesheet"/>
+    <link rel="SHORTCUT ICON" href="images/sun.gif" type="image/gif">
+    <title>Солнышко</title>
+</head>
+<body class="background">
+<header>
+    <?php require "top.html"; ?>
+</header>
+<main>
+    <nav>
+        <?php require "menu.html"; ?>
+    </nav>
+    <div class="faq">
+        <!--<h1>Часто задаваемые вопросы:</h1>
+        <div class="question">Вопрос</div>
+        <div class="answer">Ответ</div>-->
+        <form id="faq-form" method="POST">
+            <input id="input_name" type="text" name="name" maxlength="25"
+                   placeholder="Ваше имя"/><span></span>
+            <input id="input_mail" type="email" name="mail" maxlength="100"
+                   placeholder="Ваш адрес электронной почты"/><span></span>
+            <textarea id="input_quastion" name="question" maxlength="1000"
+                      placeholder="Ваше сообщение"></textarea><span></span>
+            <input id="input_submit" type="submit" value="Отправить сообщение"><span></span>
+        </form>
+    </div>
+</main>
+<?php require "contactsCorner.html"; ?>
 
-<html class="background">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link href="css/faq.css" rel="stylesheet" type="text/css" />
-		<link href="css/theme.css" rel="stylesheet" type="text/css" />
-		<link rel="SHORTCUT ICON" href="images/sun.gif" type="image/gif">
-		<title>Вопросы</title>
-    <script type="text/javascript" src="lib/JQuery/jquery-3.3.1.js"></script>
-  	<script type="text/javascript">
-      $(document).ready(function()
-      {
-  			$('.question').click(function(){
-  				var active_answer=$(this).next('.answer');
-  				if (active_answer.attr('id')!='active_answer')
-  				{
-  					$('#active_answer').slideUp(300);
-  					$('#active_answer').attr('id','');
-  					active_answer.slideToggle(600);
-  					active_answer.attr('id','active_answer');
-  				}
-  				else
-  				{
-  					$('#active_answer').slideUp(300);
-  					$('#active_answer').attr('id','');
-  				}
-  			});
-  		});
-  	</script>
-  </head>
-<body>
-  <div name="top" class=top>
-    <?php
-      require "top.html";
-    ?>
-  </div>
-  <div name="menu" class="menu">
-    <?php
-      require "menu.html";
-    ?>
-  </div>
-  <div class="content">
-    <?php
-      $file_index=0;
-      while(file_exists("content//faq//".++$file_index.".txt"))
-      {
-        $file=fopen("content//faq//".$file_index.".txt",r);
-        $question=fgets($file);
-        $answer=fgets($file);
-        fclose($file);
-        print "<div class='question'>".$file_index.". ".$question."</div>";
-        print "<div class='answer'>".$answer."</div>";
-      }
-    ?>
-    <form method="POST">
-      <?php
-        print $message;
-      ?>
-      <div>Ваш почтовый адрес: </div><input class="input_mail" type="email" name="mail" maxlength="100"/><br/>
-      <div>Ваш вопрос: </div><textarea class="input_quastion" type="text" name="question" maxlength="1000"></textarea><br/>
-      <input class="input_submit" type="submit" value="Задать вопрос">
-    </form>
-  </div>
+<script type="text/javascript" src="lib/JQuery/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $('.question').click(function () {
+        let active_answer = $(this).next('.answer');
+        if (active_answer.attr('id') != 'active_answer') {
+            $('#active_answer').slideUp(300);
+            $('#active_answer').attr('id', '');
+            active_answer.slideToggle(600);
+            active_answer.attr('id', 'active_answer');
+        }
+        else {
+            $('#active_answer').slideUp(300);
+            $('#active_answer').attr('id', '');
+        }
+    });
+
+    $('#faq-form').submit(function () {
+        $.ajax('scripts/mail.php', {
+            method: 'POST',
+            dataType: 'json',
+            data: $('#faq-form').serialize(),
+            succes: function () {
+
+            },
+            error: function () {
+
+            },
+            beforeSend: function () {
+
+            }
+        });
+        return false;
+    });
+</script>
 </body>
 </html>

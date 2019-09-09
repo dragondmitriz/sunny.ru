@@ -1,26 +1,34 @@
+h1 {
+    margin-bottom: 0;
+}
+
 .question{
-  color:#06F;
   font-size:24px;
+    cursor: pointer;
 }
 
 .answer{
   display: none;
 }
 
-body, input, textarea{
-  font-family:"Comic Sans MS", cursive;
-}
-
 form{
+    display: block;
+    position: relative;
+    width: 100%;
   margin-top: 2%;
 }
 
-.input_mail{
-  width: 60%;
+input, textarea {
+    display: block;
+    margin: 1em;
+    font-family: "Comic Sans MS", cursive;
 }
 
-.input_quastion{
-  width: 60%;
-  height: 200px;
-  resize: none;
+input:not(#input_submit), textarea {
+    width: 80%;
+}
+
+#input_quastion {
+    height: 10em;
+    resize: vertical;
 }
