@@ -59,7 +59,7 @@
     }
 
     function is_correctMail(str) {
-        return /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i.test(str);
+        return /^[\w-.]+@[\w-]+\.[a-z]{2,4}$/i.test(str);
     }
 
     $(document).ready(function () {
@@ -135,7 +135,7 @@
             let name, mail, message;
             inputName$ = $('#input_name');
             inputMail$ = $('#input_mail');
-            inputMessage$ = $('#input_message')
+            inputMessage$ = $('#input_message');
             name = inputName$.val().toString().trim();
             mail = inputMail$.val().toString().trim();
             message = inputMessage$.val().toString().trim();
