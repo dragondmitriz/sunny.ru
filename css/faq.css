@@ -18,17 +18,56 @@ form{
   margin-top: 2%;
 }
 
+.containElements {
+    display: flex;
+    margin: 0.2em;
+    flex-direction: row;
+}
+
 input, textarea {
-    display: block;
-    margin: 1em;
     font-family: "Comic Sans MS", cursive;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 2px;
+    border-width: 1px;
 }
 
 input:not(#input_submit), textarea {
     width: 80%;
 }
 
-#input_quastion {
+#input_message {
     height: 10em;
     resize: vertical;
+}
+
+.inputCorrect {
+    background-color: rgba(0, 255, 0, 0.5);
+    border: green solid 1px;
+}
+
+.inputUncorrect {
+    background-color: rgba(255, 0, 0, 0.5);
+    border: red solid 1px;
+}
+
+span {
+    background: none no-repeat left;
+    background-size: contain;
+    display: block;
+    flex-grow: 1;
+    margin: 1px;
+}
+
+.spanCorrect {
+    background-image: url("../images/spis-mark.png");
+}
+
+.spanError {
+    color: red;
+    font-size: medium;
+}
+
+.spanProgress {
+    background-image: url("../images/progress.gif");
 }
