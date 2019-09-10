@@ -27,10 +27,14 @@ if (isset($_POST['mail']) && isset($_POST['message'])) {
     $mail->isHTML(true);
     $mail->Subject = "Обратная связь";
     $mail->Body = $question . '<br><br>' . $name . '<br>' . $email;
-    if (!$mail->send()) {
+    try {
+        if (!$mail->send()) {
+            die('err');
+        } else {
+            $message = "Письмо успешно отправлено!";
+        }
+    } catch (phpmailerException $e) {
         die('err');
-    } else {
-        $message = "Письмо успешно отправлено!";
     }
 }
-?>
+
