@@ -32,15 +32,15 @@ h1{
 }
 
 #lesson3 .lesson-image{
-    width: 280px;
-    height: 400px;
+    width: 450px;
+    height: 330px;
     float: right;
     background-image: url("../content/lessons/3.jpg");
 }
 
 #lesson4 .lesson-image{
-    width: 450px;
-    height: 300px;
+    width: 300px;
+    height: 400px;
     float: left;
     background-image: url("../content/lessons/4.jpg");
 }
