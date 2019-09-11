@@ -1,15 +1,25 @@
 .timetable{
-  margin-top: 5%;
-  margin-left: 5%;
-  text-align: center;
-  font-size: 1.3vw;
-  border-width: 5px;
-  border-radius: 10px;
-  border-color: #06F;
-  border-style: double;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
 }
 
-.td{
-  border: solid 5px red;
-  border-radius: 10px;
+table {
+  margin: 0 1em 0 1em;
+  text-align: center;
+  font-size: 0.9em;
+  border-collapse: collapse;
+}
+
+td {
+  border: solid 2px dodgerblue;
+}
+
+.row_scape {
+  border-top: 5px double dodgerblue;
+}
+
+ul {
+  margin-bottom: 1em;
 }

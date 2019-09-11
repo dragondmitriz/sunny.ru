@@ -1,114 +1,101 @@
-<html class="background">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link href="css/timetable.css" rel="stylesheet" type="text/css" />
-		<link href="css/theme.css" rel="stylesheet" type="text/css" />
-		<link rel="SHORTCUT ICON" href="images/sun.gif" type="image/gif">
-		<title>Расписание</title>
-	</head>
-	<body>
-		<div name="top" class=top>
-	    <?php
-	      require "top.html";
-	    ?>
-	  </div>
-	  <div name="menu" class="menu">
-	    <?php
-	      require "menu.html";
-	    ?>
-	  </div>
-		<div class="content">
-			<table class="timetable" width="90%">
-				<tr class="text">
-					<td width="20%">Занятие</td>
-					<td width="10%">Понедельник</td>
-					<td width="10%">Вторник</td>
-					<td width="10%">Среда</td>
-					<td width="10%">Четверг</td>
-					<td width="10%">Пятница</td>
-					<td width="10%">Суббота</td>
-				</tr>
-				<?php
-					$file_index=0;
-					while(file_exists("content//timetable//".++$file_index.".txt"))
-					{
-						$file=fopen("content//timetable//".$file_index.".txt",r);
-						$name=fgets($file);
-						$color_name=mb_substr($name,mb_strpos($name," ")+1);
-						$name=mb_substr($name,0,mb_strpos($name," "));
-						$monday=fgets($file);
-						$tuesday=fgets($file);
-						$wednesday=fgets($file);
-						$thursday=fgets($file);
-						$friday=fgets($file);
-						$satuday=fgets($file);
-						print "<tr class=\"text\">";
-						print "<td style='background-color: ".$color_name."'>".$name."</td>";
-						$time1=$time2=$color=$class="";
-						if (mb_strpos($monday," ")){
-							$time1=mb_substr($monday,0,mb_strpos($monday," "));
-							$monday=mb_substr($monday,mb_strpos($monday," ")+1);
-							$time2=mb_substr($monday,0,mb_strpos($monday," "));
-							$monday=mb_substr($monday,mb_strpos($monday," ")+1);
-							$color=$monday;
-							$class=" style='background-color: ".$color."''";
-						}
-						print "<td".$class.">".$time1."<br>".$time2."</td>";
-						$time1=$time2=$color=$class="";
-						if (mb_strpos($tuesday," ")){
-							$time1=mb_substr($tuesday,0,mb_strpos($tuesday," "));
-							$tuesday=mb_substr($tuesday,mb_strpos($tuesday," ")+1);
-							$time2=mb_substr($tuesday,0,mb_strpos($tuesday," "));
-							$tuesday=mb_substr($tuesday,mb_strpos($tuesday," ")+1);
-							$color=$tuesday;
-							$class=" style='background-color: ".$color."''";
-						}
-						print "<td".$class.">".$time1."<br>".$time2."</td>";
-						$time1=$time2=$color=$class="";
-						if (mb_strpos($wednesday," ")){
-							$time1=mb_substr($wednesday,0,mb_strpos($wednesday," "));
-							$wednesday=mb_substr($wednesday,mb_strpos($wednesday," ")+1);
-							$time2=mb_substr($wednesday,0,mb_strpos($wednesday," "));
-							$wednesday=mb_substr($wednesday,mb_strpos($wednesday," ")+1);
-							$color=$wednesday;
-							$class=" style='background-color: ".$color."''";
-						}
-						print "<td".$class.">".$time1."<br>".$time2."</td>";
-						$time1=$time2=$color=$class="";
-						if (mb_strpos($thursday," ")){
-							$time1=mb_substr($thursday,0,mb_strpos($thursday," "));
-							$thursday=mb_substr($thursday,mb_strpos($thursday," ")+1);
-							$time2=mb_substr($thursday,0,mb_strpos($thursday," "));
-							$monday=mb_substr($thursday,mb_strpos($thursday," ")+1);
-							$color=$monday;
-							$class=" style='background-color: ".$color."''";
-						}
-						print "<td".$class.">".$time1."<br>".$time2."</td>";
-						$time1=$time2=$color=$class="";
-						if (mb_strpos($friday," ")){
-							$time1=mb_substr($friday,0,mb_strpos($friday," "));
-							$friday=mb_substr($friday,mb_strpos($friday," ")+1);
-							$time2=mb_substr($friday,0,mb_strpos($friday," "));
-							$friday=mb_substr($friday,mb_strpos($friday," ")+1);
-							$color=$friday;
-							$class=" style='background-color: ".$color."''";
-						}
-						print "<td".$class.">".$time1."<br>".$time2."</td>";
-						$time1=$time2=$color=$class="";
-						if (mb_strpos($satuday," ")){
-							$time1=mb_substr($satuday,0,mb_strpos($satuday," "));
-							$satuday=mb_substr($satuday,mb_strpos($satuday," ")+1);
-							$time2=mb_substr($satuday,0,mb_strpos($satuday," "));
-							$satuday=mb_substr($satuday,mb_strpos($satuday," ")+1);
-							$color=$satuday;
-							$class=" style='background-color: ".$color."''";
-						}
-						print "<td".$class.">".$time1."<br>".$time2."</td>";
-						print "</tr>";
-						fclose($file);
-					}
-				?>
-			</table>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="content-language" content="ru"/>
+    <meta name="description" content='Расписание Занятий в Центре интеллектуального развития "Солнышко"'/>
+    <link href="css/layout.css" rel="stylesheet"/>
+    <link href="css/timetable.css" rel="stylesheet"/>
+    <link href="css/top.css" rel="stylesheet"/>
+    <link href="css/menu.css" rel="stylesheet"/>
+    <link href="css/banner.css" rel="stylesheet"/>
+    <link href="css/contactsCorner.css" rel="stylesheet"/>
+    <link rel="SHORTCUT ICON" href="images/sun.gif" type="image/gif">
+    <title>Расписание занятий</title>
+</head>
+<body class="background">
+<header>
+    <?php require "top.html"; ?>
+</header>
+<main>
+    <nav>
+        <?php require "menu.html"; ?>
+    </nav>
+    <div class="timetable">
+        <ul>
+            <li>Занятия «Развивалочка» и «Подготовка к школе» проводятся 2 раза в неделю</li>
+            <li>Занятия «Художественная лепка» проводятся 1 раз в неделю</li>
+        </ul>
+        <table cellspacing="0">
+            <tr>
+                <th>Дни недели</th>
+                <th>Название занятий</th>
+                <th>Возрастная<br>группа</th>
+                <th>Время занятий</th>
+                <th>Продолжительность<br>занятий</th>
+            </tr>
+            <tr>
+                <td rowspan="4">Понедельник<br> Среда</td>
+                <td rowspan="3">«Развивалочка»</td>
+                <td>1,6 лет</td>
+                <td>10:00-10:40</td>
+                <td>40 мин.</td>
+            </tr>
+            <tr>
+                <td>2 года</td>
+                <td>10:50-11:30</td>
+                <td>40 мин.</td>
+            </tr>
+            <tr>
+                <td>4 года</td>
+                <td>18:40-19:40</td>
+                <td>1 час.</td>
+            </tr>
+            <tr>
+                <td>«Подготовка к школе»</td>
+                <td>6 лета</td>
+                <td>16:30-18:30</td>
+                <td>2 часа</td>
+            </tr>
+            <tr class="row_scape">
+                <td rowspan="4">Вторник<br>Пятница</td>
+                <td rowspan="2">«Развивалочка»</td>
+                <td>3 года</td>
+                <td>10:30-11:30</td>
+                <td>1 час</td>
+            </tr>
+            <tr>
+                <td>6 лет</td>
+                <td>11:40-13:40</td>
+                <td>2 часа</td>
+            </tr>
+            <tr>
+                <td rowspan="2">«Подготовка к школе»</td>
+                <td>5 лет</td>
+                <td>16:30-18:30</td>
+                <td>2 часа</td>
+            </tr>
+            <tr>
+                <td>6 лет</td>
+                <td>18:40-20:40</td>
+                <td>2 часа</td>
+            </tr>
+            <tr class="row_scape">
+                <td rowspan="2">Суббота</td>
+                <td rowspan="2">«Художественная лепка»</td>
+                <td>3-4 года</td>
+                <td>12:00-12:40</td>
+                <td>40 мин.</td>
+            </tr>
+            <tr>
+                <td>с 5 лет</td>
+                <td>13:00-14:00</td>
+                <td>1 час</td>
+            </tr>
+        </table>
+    </div>
+</main>
+<?php require "contactsCorner.html"; ?>
+</body>
 </html>
