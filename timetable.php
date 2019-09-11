@@ -81,7 +81,7 @@
                 <td>18:40-20:40</td>
                 <td>2 часа</td>
             </tr>
-            <tr class="row_scape">
+            <tr class="row_space">
                 <td rowspan="2">Суббота</td>
                 <td rowspan="2">«Художественная лепка»</td>
                 <td>3-4 года</td>

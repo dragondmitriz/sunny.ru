@@ -1,0 +1,25 @@
+.payment {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+}
+
+table {
+    margin: 0 1em 0 1em;
+    text-align: center;
+    font-size: 0.9em;
+    border-collapse: collapse;
+}
+
+td {
+    border: solid 2px dodgerblue;
+}
+
+.row_space {
+    border-top: 5px double dodgerblue;
+}
+
+ul {
+    margin-bottom: 1em;
+}
