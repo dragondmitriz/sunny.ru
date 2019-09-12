@@ -33,10 +33,10 @@
 <script type="text/javascript" src="lib/JQuery/jquery-3.3.1.js"></script>
 <script type="text/javascript">
     $('.menu-main').click(function () {
-        var items = $('.menu-item');
-        var len = items.length;
-        for (var i = 0; i < len; i++) {
-            if (items[i].style.display != 'table-row') {
+        let items = $('.menu-item');
+        let len = items.length;
+        for (let i = 0; i < len; i++) {
+            if (items[i].style.display !== 'table-row') {
                 items.eq(i).slideToggle(500);
             } else {
                 items.eq(i).slideUp(500);
