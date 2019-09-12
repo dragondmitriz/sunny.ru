@@ -5,6 +5,7 @@
     margin: 0.5%;
     border: 10px double #06F;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .block_photo {
@@ -51,6 +52,7 @@
     flex-grow: 0;
     width: 20%;
     margin: 5px;
+    cursor: pointer;
 }
 
 #gallery-button-close {
