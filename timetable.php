@@ -58,7 +58,7 @@
                 <td>16:30-18:30</td>
                 <td>2 часа</td>
             </tr>
-            <tr class="row_scape">
+            <tr class="row_space">
                 <td rowspan="4">Вторник<br>Пятница</td>
                 <td rowspan="2">«Развивалочка»</td>
                 <td>3 года</td>
