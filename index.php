@@ -34,16 +34,24 @@
             <li>Расширение кругозора</li>
             <li>Развитие творческих способностей, фантазии</li>
         </ul>
-        <ul>
-            <li>Ранее развитие (1,6-2 года) "Развивалочка"</li>
-            <li>Ритмопластика (2-3 лет)</li>
-            <li>Развивающие игры (3-4 года)</li>
-            <li>Подготовка к школе (5-7 лет)</li>
-            <li>Чтение (5-7 лет)</li>
-            <li>Помощь школьнику (1-4 класс)</li>
-            <li>Художественная лепка (с 3-х лет)</li>
-            <li>Информатика</li>
-        </ul>
+        <div class="lessons">
+            <div class="lessonsRow">
+                <a href='lessons.php#lesson1'">Ранее развитие (1,6-2 года) "Развивалочка"</a>
+                <a href='lessons.php#lesson2'">Ритмопластика (2-3 лет)</a>
+            </div>
+            <div class="lessonsRow">
+                <a href='lessons.php#lesson4'">Подготовка к школе (5-7 лет)</a>
+                <a href='lessons.php#lesson3'">Развивающие игры (3-4 года)</a>
+            </div>
+            <div class="lessonsRow">
+                <a href='lessons.php#lesson6'">Чтение (5-7 лет)</a>
+                <a href='lessons.php#lesson5'">Художественная лепка (с 3-х лет)</a>
+            </div>
+            <div class="lessonsRow">
+                <a href='lessons.php#lesson7'">Помощь школьнику (1-4 класс)</a>
+                <a href='lessons.php#lesson8'">Информатика</a>
+            </div>
+        </div>
     </div>
     <aside>
         <?php require "banner.php"; ?>

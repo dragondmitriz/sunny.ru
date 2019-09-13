@@ -168,7 +168,6 @@
         </div>
         <hr>
         <h1>Индивидуальные занятия</h1>
-        <!--Помощь школьнику-->
         <div class="lesson">
             <h2 class="lesson-name">"Подготовка к школе" (5-7 лет)</h2>
             <div class="lesson-description">
@@ -176,13 +175,13 @@
                 <p>Продолжительность занятия 1 час.</p>
             </div>
         </div>
-        <div class="lesson">
+        <div id="lesson6" class="lesson">
             <h2 class="lesson-name">"Чтение" (5-7 лет)</h2>
             <div class="lesson-description">
                 <p>Продолжительность занятия 30 мин.</p>
             </div>
         </div>
-        <div class="lesson">
+        <div id="lesson7" class="lesson">
             <h2 class="lesson-name">"Помощь школьнику" (1-4 класс)</h2>
             <div class="lesson-description">
                 Ликвидация пробелов знаний по школьным программам:
@@ -200,7 +199,7 @@
                 <p>Продолжительность занятия 1 час.</p>
             </div>
         </div>
-        <div class="lesson">
+        <div id="lesson8" class="lesson">
             <h2 class="lesson-name">"Информатика" (с 13 лет)</h2>
             <div class="lesson-description">
                 <ul>
