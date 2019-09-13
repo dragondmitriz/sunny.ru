@@ -12,12 +12,6 @@
     text-align: center;
 }
 
-@media (max-width: 600px) {
-    .photo {
-        height: 50px;
-    }
-}
-
 #gallery {
     position: fixed;
     top: 1%;
@@ -69,4 +63,28 @@
 #ghoast {
     width: 0;
     flex-grow: 0;
+}
+
+@media screen and (orientation: portrait) {
+    .photo {
+        height: 19em;
+    }
+
+    #gallery {
+        width: 95%;
+        left: 2.5%;
+    }
+
+    .gallery-main {
+        flex-direction: column;
+    }
+
+    .gallery-button {
+        display: none;
+    }
+
+    .gallery-image {
+        height: 100%;
+        width: 100%;
+    }
 }

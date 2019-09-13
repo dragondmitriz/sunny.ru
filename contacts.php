@@ -20,11 +20,13 @@
     <div class="contacts">
         <p>
             Контактный телефон:<br/>
-            Иванова Ирина Анатольевна: <a href="tel:+79854465869">+7 (985) 446-58-69</a><br/>
-            Электронная почта: <a href="mailto:club-sunny@club-sunny.ru">club-sunny@club-sunny.ru</a><br/>
-            Адрес центра: Россия, г. Москва, п. Кокошкино, д. п. Кокошкино, ул. Дзержинского, д. 6, оф. 21
+            Иванова Ирина Анатольевна: <a href="tel:+79854465869">+7&nbsp;(985)&nbsp;446&#8209;58&#8209;69</a><br/>
+            Электронная почта: <a href="mailto:club-sunny@club-sunny.ru">club&#8209;sunny@club&#8209;sunny.ru</a><br/>
+            Адрес центра: Россия, г.&nbsp;Москва, п.&nbsp;Кокошкино, д.п.&nbsp;Кокошкино, ул.&nbsp;Дзержинского, д.&nbsp;6,
+            оф.&nbsp;21
         </p>
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A131dad4e83b449306f7c21d71e02b28f62021c44954a783b86d89f70d1ab9a58&amp;width=806&amp;height=570&amp;lang=ru_RU&amp;scroll=true"></script>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A131dad4e83b449306f7c21d71e02b28f62021c44954a783b86d89f70d1ab9a58&amp;source=constructor"
+                width="100%" height="570" frameborder="0"></iframe>
     </div>
     <aside>
         <?php require "banner.php"; ?>

@@ -32,8 +32,8 @@ h1{
 }
 
 #lesson3 .lesson-image{
-    width: 450px;
-    height: 330px;
+    width: 500px;
+    height: 180px;
     float: right;
     background-image: url("../content/lessons/3.jpg");
 }
@@ -50,4 +50,28 @@ h1{
     height: 440px;
     float: right;
     background-image: url("../content/lessons/5.jpg");
+}
+
+@media screen and (orientation: portrait) {
+    #lesson1 .lesson-image, #lesson2 .lesson-image, #lesson3 .lesson-image, #lesson4 .lesson-image, #lesson5 .lesson-image {
+        position: absolute;
+        float: none;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        opacity: 0.5;
+    }
+
+    .lesson-description ul, .lesson-description ol {
+        list-style-position: inside;
+    }
+
+    #lesson1 .lesson-image {
+        background-image: url('../content/lessons/1!.jpg');
+    }
+
+    #lesson3 .lesson-image {
+        background-image: url("../content/lessons/3!.jpg");
+    }
 }

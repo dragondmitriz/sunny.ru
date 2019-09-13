@@ -2,9 +2,13 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    /*background: url('../images/oblako.gif') no-repeat;*/
-    /*background-size: 190% 150%;*/
-    padding: 1em 5px 5px 1em;
     font-size: 0.7em;
-    text-align: right;
+    text-align: right;;
+}
+
+@media screen and (orientation: portrait) {
+    .contactsCorner {
+        font-size: 1.2em;
+        right: 0.5em;
+    }
 }

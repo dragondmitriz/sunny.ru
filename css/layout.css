@@ -57,6 +57,7 @@ a{
 @media screen and (orientation: portrait){
     body{
         font-size: 30px;
+        padding: 1em 1em 4em;
     }
 
     main{
@@ -71,5 +72,7 @@ a{
         align-items: stretch;
     }
 
-
+    ul {
+        list-style-image: url("/images/spis-mark-mobile.png");
+    }
 }

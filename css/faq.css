@@ -71,3 +71,17 @@ span {
 .spanProgress {
     background-image: url("../images/progress.gif");
 }
+
+@media screen and (orientation: portrait) {
+    input:not(#input_submit), textarea {
+        width: 100%;
+        font-size: 1em;
+        height: 2em;
+    }
+
+    #input_submit {
+        width: 100%;
+        font-size: 1em;
+        height: 2em;
+    }
+}

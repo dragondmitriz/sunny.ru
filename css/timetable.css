@@ -23,3 +23,9 @@ td {
 ul {
   margin-bottom: 1em;
 }
+
+@media screen and (orientation: portrait) {
+  table {
+    margin-left: 0;
+  }
+}
