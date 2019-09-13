@@ -36,20 +36,20 @@
         </ul>
         <div class="lessons">
             <div class="lessonsRow">
-                <a href='lessons.php#lesson1'">Ранее развитие (1,6-2 года) "Развивалочка"</a>
-                <a href='lessons.php#lesson2'">Ритмопластика (2-3 лет)</a>
+                <a id='lesson1' class="lessonLeft" href='lessons.php#lesson1'">Ранее развитие (1,6-2 года) "Развивалочка"</a>
+                <a id='lesson2' class="lessonRight" href='lessons.php#lesson2'">Ритмопластика (2-3 лет)</a>
             </div>
             <div class="lessonsRow">
-                <a href='lessons.php#lesson4'">Подготовка к школе (5-7 лет)</a>
-                <a href='lessons.php#lesson3'">Развивающие игры (3-4 года)</a>
+                <a id='lesson4' class="lessonLeft" href='lessons.php#lesson4'">Подготовка к школе (5-7 лет)</a>
+                <a id='lesson3' class="lessonRight" href='lessons.php#lesson3'">Развивающие игры (3-4 года)</a>
             </div>
             <div class="lessonsRow">
-                <a href='lessons.php#lesson6'">Чтение (5-7 лет)</a>
-                <a href='lessons.php#lesson5'">Художественная лепка (с 3-х лет)</a>
+                <a id='lesson6' class="lessonLeft" href='lessons.php#lesson6'">Чтение (5-7 лет)</a>
+                <a id='lesson5' class="lessonRight" href='lessons.php#lesson5'">Художественная лепка (с 3-х лет)</a>
             </div>
             <div class="lessonsRow">
-                <a href='lessons.php#lesson7'">Помощь школьнику (1-4 класс)</a>
-                <a href='lessons.php#lesson8'">Информатика</a>
+                <a id='lesson7' class="lessonLeft" href='lessons.php#lesson7'">Помощь школьнику (1-4 класс)</a>
+                <a id='lesson8' class="lessonRight" href='lessons.php#lesson8'">Информатика (с 13 лет)</a>
             </div>
         </div>
     </div>

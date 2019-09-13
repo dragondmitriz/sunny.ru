@@ -4,3 +4,64 @@
     justify-content: space-between;
     align-items: stretch;
 }
+
+.lessonLeft{
+    text-align: left;
+}
+
+.lessonRight{
+    text-align: right;
+}
+
+.lessonsRow a{
+    background: no-repeat center;
+    background-size: cover;
+    width: 50%;
+    height: 2.7em;
+    padding: 5px;
+    margin: 5px;
+}
+
+#lesson1{
+    background-image: url("../content/lessons/1-.jpg") ;
+}
+
+#lesson2{
+    background-image: url("../content/lessons/2-.jpg") ;
+}
+
+#lesson3{
+    background-image: url("../content/lessons/3-.jpg") ;
+}
+
+#lesson4{
+    background-image: url("../content/lessons/4-.jpg") ;
+}
+
+#lesson5{
+    background-image: url("../content/lessons/5-.jpg") ;
+}
+
+#lesson6{
+    background-image: url("../content/lessons/6-.jpg") ;
+}
+
+#lesson7{
+    background-image: url("../content/lessons/7-.jpg") ;
+}
+
+#lesson8{
+    background-image: url("../content/lessons/8-.jpg") ;
+}
+
+@media screen and (orientation: portrait){
+    .lessonsRow{
+        flex-direction: column;
+    }
+
+    .lessonsRow a{
+        text-align: center;
+        width: 100%;
+        font-size: 1.5em;
+    }
+}
