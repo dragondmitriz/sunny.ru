@@ -31,7 +31,7 @@
 }
 
 .text-title{
-    font-size: calc(3.4vh);
+    font-size: calc(2.5vh + 0.4vw);
     font-family: "Monotype Corsiva", serif;
     font-weight: bold;
     color: black;
