@@ -110,7 +110,7 @@
         ghoast$
         //загрузка нового изображения в "призрака"
             .css('background-image', function () {
-                if (indx_selectedItem - 2 < 0) return collectionGallery[collectionGallery.length + indx_selectedItem - 3];
+                if (indx_selectedItem - 2 < 0) return collectionGallery[collectionGallery.length - 2 + indx_selectedItem];
                 return collectionGallery[indx_selectedItem - 2];
             })
             //для выравниваниия расположения изображений до и после анимации, так как кнопки галереи имеют отступы в 5px, что выдаёт "призрака" и тот выдаёт своё существование
@@ -179,8 +179,8 @@
         rightButton$
             .css('width', '0')
             .css('background-image', function () {
-                if (indx_selectedItem + 2 > collectionGallery.length - 1)
-                    return collectionGallery[indx_selectedItem + 1 - collectionGallery.length];
+                if (indx_selectedItem + 2 >= collectionGallery.length - 1)
+                    return collectionGallery[collectionGallery.length - indx_selectedItem - 1];
                 return collectionGallery[indx_selectedItem + 2]
             });
 
