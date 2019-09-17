@@ -179,8 +179,8 @@
         rightButton$
             .css('width', '0')
             .css('background-image', function () {
-                if (indx_selectedItem + 2 >= collectionGallery.length - 1)
-                    return collectionGallery[collectionGallery.length - indx_selectedItem - 1];
+                if (indx_selectedItem + 2 > collectionGallery.length - 1)
+                    return collectionGallery[indx_selectedItem + 2 - collectionGallery.length];
                 return collectionGallery[indx_selectedItem + 2]
             });
 
