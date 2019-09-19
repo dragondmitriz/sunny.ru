@@ -2,6 +2,13 @@
 <project version="4">
   <component name="PublishConfigData" serverName="ru-center" uploadOnCheckin="817cb2a4-af34-494b-9998-7ef6e471c0d3">
     <serverData>
+      <paths name="openserver">
+        <serverdata>
+          <mappings>
+            <mapping deploy="\" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="ru-center">
         <serverdata>
           <mappings>

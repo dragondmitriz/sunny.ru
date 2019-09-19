@@ -10,6 +10,9 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="f77e6451-0059-4cce-9440-a93421d92187" name="openserver" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="D:\5 programs\dmitriz\OSPanel\domains\sunny.ru" accessType="MOUNT" />
+      </webServer>
     </option>
   </component>
 </project>
