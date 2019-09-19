@@ -123,7 +123,7 @@
         <!--Подготовка к школе-->
         <div id="lesson4" class="lesson">
             <div class="lesson-image"></div>
-            <h2 class="lesson-name">"Подготовка к школе" (5-7 лет)</h2>
+            <h2 class="lesson-name">Подготовка к школе (5-7 лет)</h2>
             <div class="lesson-description">
                 <ol>
                     <li>Устные занятия: расширение кругозора, игры для развития фонематического слуха,
@@ -191,20 +191,20 @@
         <hr>
         <h1>Индивидуальные занятия</h1>
         <div class="lesson">
-            <h2 class="lesson-name">"Подготовка к школе" (5-7 лет)</h2>
+            <h2 class="lesson-name">Подготовка к школе (5-7 лет)</h2>
             <div class="lesson-description">
                 Обучение чтению, письму и счету.
                 <p>Продолжительность занятия 1 час.</p>
             </div>
         </div>
         <div id="lesson6" class="lesson">
-            <h2 class="lesson-name">"Чтение" (5-7 лет)</h2>
+            <h2 class="lesson-name">Чтение (5-7 лет)</h2>
             <div class="lesson-description">
                 <p>Продолжительность занятия 30 мин.</p>
             </div>
         </div>
         <div id="lesson7" class="lesson">
-            <h2 class="lesson-name">"Помощь школьнику" (1-4 класс)</h2>
+            <h2 class="lesson-name">Помощь школьнику (1-4 класс)</h2>
             <div class="lesson-description">
                 Ликвидация пробелов знаний по школьным программам:
                 <ul>
@@ -222,7 +222,7 @@
             </div>
         </div>
         <div id="lesson8" class="lesson">
-            <h2 class="lesson-name">"Информатика" (с 13 лет)</h2>
+            <h2 class="lesson-name">Информатика (с 13 лет)</h2>
             <div class="lesson-description">
                 <ul>
                     <li>Основы работы с компьютером с ОС Windows:</li>
