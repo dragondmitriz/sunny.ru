@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-	<loc>http://club-sunny.ru/</loc>
-	<lastmod>2019-09-18T08:54:51+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>http://club-sunny.ru/lessons.php</loc>
-	<lastmod>2019-09-18T08:54:52+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>http://club-sunny.ru/timetable.php</loc>
-	<lastmod>2019-09-18T08:54:52+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://club-sunny.ru/payment.php</loc>
-	<lastmod>2019-09-18T08:54:52+01:00</lastmod>
-	<priority>0.9</priority>
-</url>
-<url>
-	<loc>http://club-sunny.ru/media.php</loc>
-	<lastmod>2019-09-18T08:54:53+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://club-sunny.ru/faq.php</loc>
-	<lastmod>2019-09-18T08:54:53+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://club-sunny.ru/contacts.php</loc>
-	<lastmod>2019-09-18T08:54:53+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>http://club-sunny.ru/</loc>
+        <lastmod>2019-09-18T08:54:51+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://club-sunny.ru/lessons.php</loc>
+        <lastmod>2019-09-18T08:54:52+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://club-sunny.ru/timetable.php</loc>
+        <lastmod>2019-09-18T08:54:52+01:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://club-sunny.ru/payment.php</loc>
+        <lastmod>2019-09-18T08:54:52+01:00</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>http://club-sunny.ru/media.php</loc>
+        <lastmod>2019-09-18T08:54:53+01:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://club-sunny.ru/faq.php</loc>
+        <lastmod>2019-09-18T08:54:53+01:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://club-sunny.ru/contacts.php</loc>
+        <lastmod>2019-09-18T08:54:53+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
 </urlset>
