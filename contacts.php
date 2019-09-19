@@ -1,6 +1,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="content-language" content="ru"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content='Контакты Центра интеллектуального развития "Солнышко"'/>
     <title>Контакты</title>
     <link href="css/layout.css" rel="stylesheet"/>
     <link href="css/top.css" rel="stylesheet"/>

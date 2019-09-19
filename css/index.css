@@ -61,7 +61,6 @@
 
     .lessonsRow a{
         text-align: center;
-        width: 100%;
-        font-size: 1.5em;
+        width: 95%;
     }
 }

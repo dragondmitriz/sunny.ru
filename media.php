@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="UTF-8"/>
     <meta http-equiv="content-language" content="ru"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content='Галерея Центра интеллектуального развития "Солнышко"'/>
     <link href="css/layout.css" rel="stylesheet"/>
     <link href="css/media.css" rel="stylesheet"/>

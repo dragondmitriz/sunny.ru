@@ -6,7 +6,7 @@
 }
 
 table {
-  margin: 0 1em 0 1em;
+  margin-left: 0.4em;
   text-align: center;
   font-size: 0.9em;
   border-collapse: collapse;
@@ -26,6 +26,6 @@ ul {
 
 @media screen and (orientation: portrait) {
   table {
-    margin-left: 0;
+    font-size: 0.6em;
   }
 }

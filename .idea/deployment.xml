@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="ru-center" uploadOnCheckin="817cb2a4-af34-494b-9998-7ef6e471c0d3">
+  <component name="PublishConfigData" autoUpload="Always" serverName="openserver" uploadOnCheckin="f77e6451-0059-4cce-9440-a93421d92187">
     <serverData>
       <paths name="openserver">
         <serverdata>
@@ -17,6 +17,7 @@
         </serverdata>
       </paths>
     </serverData>
-    <option name="myUploadOnCheckinName" value="ru-center" />
+    <option name="myUploadOnCheckinName" value="openserver" />
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

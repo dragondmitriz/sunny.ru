@@ -63,10 +63,6 @@ h1{
         opacity: 0.2;
     }
 
-    .lesson-description ul, .lesson-description ol {
-        list-style-position: inside;
-    }
-
     #lesson1 .lesson-image {
         background-image: url('../content/lessons/1!.jpg');
     }

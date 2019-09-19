@@ -16,12 +16,7 @@
 
 @media screen and (orientation: portrait) {
     .new-title {
-        font-size: calc(2vh + 2vw);
         margin: 0;
-    }
-
-    .new-content {
-        font-size: calc(2vh + 2vw);
     }
 
     .news-title {
