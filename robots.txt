@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /content/
+Disallow: /images/
+Disallow: /scripts/
+Disallow: /css/
+Disallow: /lib/
+Disallow: /application.php
+Sitemap: http://club-sunny.com/sitemap.xml
